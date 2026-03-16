@@ -73,3 +73,8 @@ __pypackages__/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log

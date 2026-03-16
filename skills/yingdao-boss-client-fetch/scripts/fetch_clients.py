@@ -17,17 +17,17 @@ try:
     from cryptography.hazmat.primitives.asymmetric import padding
 except ModuleNotFoundError as exc:
     print(
-        "Missing dependency: {}. Run `pip install -r scripts/requirements.txt` first.".format(exc.name),
+        "Missing dependency: {}. Run `pip install -r skills/yingdao-boss-client-fetch/scripts/requirements.txt` first.".format(exc.name),
         file=sys.stderr,
     )
     sys.exit(1)
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_DIR = SCRIPT_DIR.parent
-WORKSPACE_DIR = SKILL_DIR.parent.parent
-DEFAULT_CONFIG_PATH = WORKSPACE_DIR / "runtime" / "yingdao-boss-client-fetch" / "config.local.json"
+REPO_ROOT = SKILL_DIR.parent.parent
+DEFAULT_CONFIG_PATH = REPO_ROOT / "runtime" / "yingdao-boss-client-fetch" / "config.local.json"
 TEMPLATE_CONFIG_PATH = SKILL_DIR / "config.template.json"
-SHARED_RUNTIME_DIR = WORKSPACE_DIR / "runtime" / "yingdao-boss"
+SHARED_RUNTIME_DIR = REPO_ROOT / "runtime" / "yingdao-boss"
 DEFAULT_LATEST_OUTPUT_PATH = SHARED_RUNTIME_DIR / "latest-clients.json"
 DEFAULT_ARCHIVE_DIR = SHARED_RUNTIME_DIR / "archive"
 

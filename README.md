@@ -81,3 +81,9 @@ skills/
 ```
 
 这样仓库会更像一个稳定的自研 skills registry，而不是单个 skill 的临时仓库。
+
+## 维护建议
+
+- 新增 skill 前，优先阅读 `CONTRIBUTING.md`
+- 尽量保持所有 skill 目录骨架一致
+- 不要把某个 skill 的脚本或 references 再放回仓库顶层
